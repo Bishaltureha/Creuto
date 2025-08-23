@@ -135,14 +135,12 @@ export default DayWeatherReport;
 const styles = StyleSheet.create({
   container: {
     marginTop: scaleHeight(20),
-    width: scaleWidth(328),
     height: scaleHeight(262),
     borderRadius: scaleWidth(8),
     opacity: 1,
     justifyContent: 'center',
     alignItems: 'center',
     gap: scaleHeight(12),
-    alignSelf: 'center',
   },
   title: {
     fontSize: scaleWidth(18),

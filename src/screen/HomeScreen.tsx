@@ -86,48 +86,53 @@ const HomeScreen = () => {
   }
 
   return (
-    <ScrollView
-      refreshControl={
-        <RefreshControl refreshing={isLoading} onRefresh={getHomeWeather} />
-      }
-      contentContainerStyle={[styles.scrollContainer, {paddingTop: inset.top}]}
-      showsVerticalScrollIndicator={false}>
-      <BlueBackground
-        width={screenWidth + 2}
-        height={224}
-        preserveAspectRatio="none"
-        style={styles.backgroundSvg}
-      />
-      <View style={styles.contentContainer}>
-        <View style={styles.header}>
-          <Menu />
-          <NotificationBell />
+    <View style={styles.root}>
+      <ScrollView
+        refreshControl={
+          <RefreshControl refreshing={isLoading} onRefresh={getHomeWeather} />
+        }
+        contentContainerStyle={[
+          styles.scrollContainer,
+          {paddingTop: inset.top},
+        ]}
+        showsVerticalScrollIndicator={false}>
+        <BlueBackground
+          width={screenWidth + 2}
+          height={224}
+          preserveAspectRatio="none"
+          style={styles.backgroundSvg}
+        />
+        <View style={styles.contentContainer}>
+          <View style={styles.header}>
+            <Menu />
+            <NotificationBell />
+          </View>
+          <Text style={styles.Text}>Good Morning Nihar,</Text>
+
+          <WeatherCard weatherData={localWeatherData} />
+
+          {!hasPermission && (
+            <YellowCard
+              refreshLocation={refreshLocation}
+              containerStyle={styles.enableLocation}
+            />
+          )}
+
+          <View style={styles.grid}>
+            {data.map(item => (
+              <SmallBox key={item.id} text={item.text} source={item.source} />
+            ))}
+          </View>
+
+          <CardSection1 title="Culture Manual" />
+          <BlueCard />
+          <CardSection2 title="Crop Diseases" />
+          <RateUS />
+
+          <Water />
         </View>
-        <Text style={styles.Text}>Good Morning Nihar,</Text>
-
-        <WeatherCard weatherData={localWeatherData} />
-
-        {!hasPermission && (
-          <YellowCard
-            refreshLocation={refreshLocation}
-            containerStyle={styles.enableLocation}
-          />
-        )}
-
-        <View style={styles.grid}>
-          {data.map(item => (
-            <SmallBox key={item.id} text={item.text} source={item.source} />
-          ))}
-        </View>
-
-        <CardSection1 title="Culture Manual" />
-        <BlueCard />
-        <CardSection2 title="Crop Diseases" />
-        <RateUS />
-
-        <Water />
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 };
 
@@ -136,6 +141,9 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   scrollContainer: {
     flexGrow: 1,
+  },
+  root: {
+    flex: 1,
   },
   container: {
     flex: 1,

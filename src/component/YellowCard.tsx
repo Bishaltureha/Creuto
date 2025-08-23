@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
 
     // Android shadow
     elevation: 4,
+    overflow: 'hidden',
   },
   row: {
     flexDirection: 'row',

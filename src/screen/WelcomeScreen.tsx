@@ -40,7 +40,7 @@ const WelcomeScreen = () => {
   const goNext = () => {
     if (currentIndex === onboardingData.length - 1) {
       Helpers.setOnboardingDone();
-      refreshLocation();
+      refreshLocation(true);
       navigation.navigate('BottomNavigation');
     } else {
       setCurrentIndex(prev => prev + 1);

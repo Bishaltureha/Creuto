@@ -9,16 +9,12 @@ import {
 } from 'react-native';
 import {scaleHeight, scaleWidth} from '../utility/dimen';
 
-const {width: screenWidth, height: screenHeight} = Dimensions.get('window');
-const scaleX = screenWidth / 360;
-const scaleY = screenHeight / 800;
-
 const RateUS = () => {
   return (
     <View style={styles.box}>
       <Text style={styles.text}>
         Join us in revolutionizing aquaculture by sharing your experience with
-        the{'\n'}Weather App app.
+        the Weather App app.
       </Text>
 
       <View style={styles.imageContainer}>
@@ -41,27 +37,26 @@ export default RateUS;
 
 const styles = StyleSheet.create({
   box: {
-    width: scaleWidth(328),
     height: scaleHeight(244),
     borderRadius: scaleWidth(12),
-    opacity: 1,
     padding: scaleWidth(12),
     borderWidth: scaleWidth(2),
     backgroundColor: '#E8FFB7',
     borderColor: '#DFFC9E',
-    alignSelf: 'center',
     marginTop: scaleHeight(12),
     marginBottom: scaleHeight(20),
     gap: scaleHeight(4),
     alignItems: 'center',
+    flexGrow: 1,
+    justifyContent: 'center',
   },
   text: {
-    fontFamily: 'PublicSans-SemiBold',
     fontWeight: '600',
     fontSize: scaleWidth(16),
     lineHeight: scaleHeight(22),
     textAlign: 'center',
     color: '#0A0A0A',
+    paddingHorizontal: scaleWidth(20),
   },
   imageContainer: {
     alignItems: 'center',
@@ -74,7 +69,6 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   subText: {
-    fontFamily: 'PublicSans-Italic',
     fontWeight: '400',
     fontSize: scaleWidth(12),
     lineHeight: scaleHeight(18),
@@ -91,7 +85,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    fontFamily: 'PublicSans-Bold',
     fontWeight: '700',
     fontSize: scaleWidth(14),
     lineHeight: scaleHeight(24),

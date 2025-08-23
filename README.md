@@ -1,80 +1,68 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+<p align="center">
+  <img src="assets/logo.png" alt="Creuto Logo" width="120"/>
+</p>
 
-# Getting Started
+<h1 align="center">🌱 Creuto App</h1>
+<p align="center">A Smart Aquaculture & Weather Advisory Mobile App</p>
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+---
 
-## Step 1: Start the Metro Server
+## 📌 Introduction
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+**Creuto App** is a React Native mobile application designed to empower farmers and aquaculture communities.  
+It provides **real-time weather forecasts**, **aquaculture disease management manuals**, **crop trading marketplace**, and **feedback tools** — all in one platform.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+---
 
-```bash
-# using npm
-npm start
+## ✨ Features
 
-# OR using Yarn
-yarn start
-```
+- 🌊 **Aquaculture Guide**  
+  Disease manuals & crop-related knowledge for farmers.
 
-## Step 2: Start your Application
+- 🌦 **Weather Advisory**
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+  - Current weather data
+  - 5-day forecast
+  - Charts & reports with clean UI
+  - Location auto-detection with fallback
 
-### For Android
+- 🛒 **Crop Trading**  
+  Simple marketplace where farmers can trade crops.
 
-```bash
-# using npm
-npm run android
+- 📊 **Reports & Analytics**  
+  Weather reports with daily & weekly breakdowns.
 
-# OR using Yarn
-yarn android
-```
+- 📱 **Onboarding Flow**  
+  Splash → Welcome → Dashboard for smooth entry.
 
-### For iOS
+- 💬 **Feedback Section**  
+  "Rate Us" & feedback submission option.
 
-```bash
-# using npm
-npm run ios
+- 💾 **Offline Support**  
+  Uses **AsyncStorage / MMKV** for data persistence.
 
-# OR using Yarn
-yarn ios
-```
+---
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## 📸 Screenshots
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+> Add your app screenshots here
 
-## Step 3: Modifying your App
+<p align="center">
+  <img src="screenshots/splash.png" width="200"/> 
+  <img src="screenshots/dashboard.png" width="200"/> 
+  <img src="screenshots/weather.png" width="200"/>
+</p>
 
-Now that you have successfully run the app, let's modify it.
+---
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## 🛠 Tech Stack
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+- ⚛️ **React Native CLI**
+- 📍 **react-native-geolocation-service**
+- 🌦 **OpenWeather API**
+- 💾 **AsyncStorage / MMKV**
+- 🎨 **Styled Components / Custom UI**
 
-## Congratulations! :tada:
+---
 
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-# Creuto
+## 📂 Project Structure

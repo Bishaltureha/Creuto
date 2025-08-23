@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 0},
     shadowOpacity: 0.1,
     shadowRadius: scaleWidth(3),
-    elevation: 3,
+    elevation: 2,
   },
   image: {
     width: '100%',

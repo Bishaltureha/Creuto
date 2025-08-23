@@ -138,7 +138,6 @@ export default WeatherCard;
 
 const styles = StyleSheet.create({
   card: {
-    width: scaleWidth(360),
     padding: scaleWidth(12),
     borderRadius: scaleWidth(8),
     backgroundColor: '#ffffff',
@@ -146,10 +145,10 @@ const styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 0},
     shadowOpacity: 0.15,
     shadowRadius: scaleWidth(4),
-    elevation: 4,
-    alignSelf: 'center',
+    elevation: 3,
     marginTop: scaleHeight(40),
     marginBottom: scaleHeight(8),
+    flexGrow: 1,
   },
   topRow: {
     flexDirection: 'row',

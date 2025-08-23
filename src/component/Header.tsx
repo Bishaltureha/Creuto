@@ -5,6 +5,7 @@ import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {scaleWidth, screenWidth} from '../utility/dimen';
 import {Helpers} from '../utility/helper';
+import {useAppContext} from '../context/AppContext';
 
 interface Props {
   onBack: () => void;
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const Header = ({onBack, currentIndex}: Props) => {
+  const {refreshLocation} = useAppContext();
   const navigation = useNavigation<StackNavigationProp<any>>();
 
   return (
@@ -27,6 +29,7 @@ const Header = ({onBack, currentIndex}: Props) => {
       <TouchableOpacity
         onPress={() => {
           Helpers.setOnboardingDone();
+          refreshLocation(true);
           navigation.navigate('BottomNavigation');
         }}>
         <Text style={styles.city}>Skip</Text>

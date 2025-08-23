@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View, Text, Image, ImageSourcePropType} from 'react-native';
-import {scaleHeight, scaleWidth} from '../utility/dimen';
+import {scaleHeight, scaleWidth, screenWidth} from '../utility/dimen';
 
 export interface InfoCardProps {
   icon: ImageSourcePropType;
@@ -47,7 +47,7 @@ export default InfoCard;
 
 const styles = StyleSheet.create({
   card: {
-    width: scaleWidth(156),
+    width: (screenWidth - 56) / 2,
     height: scaleHeight(156),
     borderRadius: scaleWidth(8),
     padding: scaleWidth(12),
@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
     shadowRadius: scaleWidth(4),
     elevation: 3,
     justifyContent: 'space-between',
-    margin: scaleWidth(6),
   },
   icon: {
     width: scaleWidth(80),

@@ -68,13 +68,11 @@ const CardSection2 = ({title = 'Culture Manual', onSeeMore}: Props) => {
         style={styles.flatlist}
         contentContainerStyle={styles.flatlistContainer}
         renderItem={({item}) => (
-          <View style={{marginRight: 12}}>
-            <CultureCard
-              source={item.source}
-              date={item.date}
-              description={item.description}
-            />
-          </View>
+          <CultureCard
+            source={item.source}
+            date={item.date}
+            description={item.description}
+          />
         )}
       />
     </View>

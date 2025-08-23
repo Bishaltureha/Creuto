@@ -149,7 +149,7 @@ const WeatherReport: React.FC<WeatherReportProps> = ({route}) => {
   return (
     <SafeAreaView style={styles.container}>
       {weatherData ? (
-        <ScrollView contentContainerStyle={{paddingBottom: 20}}>
+        <ScrollView contentContainerStyle={styles.containerScroll}>
           {/* Header */}
           <View style={styles.header}>
             <TouchableOpacity
@@ -189,8 +189,6 @@ const WeatherReport: React.FC<WeatherReportProps> = ({route}) => {
                 extras.value = item.getValue(weatherforecast[currIndex]);
               }
 
-              console.info(extras);
-
               return (
                 <InfoCard
                   {...extras}
@@ -229,12 +227,14 @@ const WeatherReport: React.FC<WeatherReportProps> = ({route}) => {
               style={[styles.arrowButton, {backgroundColor: '#E1EFFF'}]}>
               <RightArrowIcon
                 size={20}
-                color={index === weatherData.length - 1 ? '#fff' : '#000'}
+                color={
+                  index === chunkedweatherData.length - 1 ? '#fff' : '#000'
+                }
               />
             </TouchableOpacity>
           </View>
 
-          <View style={{marginHorizontal: scaleWidth(16)}}>
+          <View style={styles.listWeather}>
             {chunkedweatherData[index].map(item => (
               <DayWeatherCard
                 key={item.dt_txt}
@@ -269,10 +269,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#EAF6FF',
   },
+  containerScroll: {
+    paddingBottom: 20,
+    paddingHorizontal: scaleWidth(16),
+  },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: scaleWidth(16),
     justifyContent: 'space-between',
     marginBottom: scaleHeight(12),
   },
@@ -290,20 +293,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    marginHorizontal: scaleWidth(8),
-    gap: scaleHeight(12),
-    marginTop: scaleHeight(16),
+    gap: scaleHeight(18),
+    marginTop: scaleHeight(24),
   },
   weekWrapper: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: scaleWidth(16),
-    marginVertical: scaleHeight(12),
-    alignContent: 'center',
+    marginTop: scaleHeight(32),
+    marginBottom: scaleHeight(24),
   },
   weekText: {
-    fontFamily: 'PublicSans-Bold',
     fontSize: scaleWidth(20),
     fontWeight: '700',
     lineHeight: scaleHeight(30),
@@ -317,5 +317,8 @@ const styles = StyleSheet.create({
     borderRadius: scaleWidth(20),
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  listWeather: {
+    gap: scaleHeight(4),
   },
 });

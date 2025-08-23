@@ -1,5 +1,6 @@
 import React, {createContext, useContext, useEffect, useState} from 'react';
 import {
+  Linking,
   PermissionsAndroid,
   Platform,
   unstable_batchedUpdates,
@@ -23,7 +24,7 @@ type AppContextType = {
     weather: WeatherHomeResponse;
     forecast: WeatherType;
   } | null;
-  refreshLocation: () => Promise<void>;
+  refreshLocation: (isOnboarding?: boolean) => Promise<void>;
 };
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -82,7 +83,7 @@ export const AppProvider: React.FC<{children: React.ReactNode}> = ({
     }
   };
 
-  const requestPermission = async (): Promise<boolean> => {
+  const requestPermission = async (isOnboarding = false): Promise<boolean> => {
     if (Platform.OS === 'ios') {
       const status = await Geolocation.requestAuthorization('whenInUse');
       return status === 'granted';
@@ -95,13 +96,22 @@ export const AppProvider: React.FC<{children: React.ReactNode}> = ({
           buttonPositive: 'OK',
         },
       );
+
+      if (
+        isOnboarding &&
+        granted === PermissionsAndroid.RESULTS.NEVER_ASK_AGAIN
+      ) {
+        Linking.openSettings();
+        return false;
+      }
+
       return granted === PermissionsAndroid.RESULTS.GRANTED;
     }
   };
 
-  const refreshLocation = async () => {
+  const refreshLocation = async (isOnboarding = false) => {
     try {
-      const hasPermission = await requestPermission();
+      const hasPermission = await requestPermission(isOnboarding);
       if (!hasPermission) {
         setHasPermission(false);
         console.warn('Location permission denied');

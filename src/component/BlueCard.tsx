@@ -45,9 +45,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     position: 'relative',
     marginBottom: scaleHeight(4),
+    marginTop: scaleHeight(4),
     justifyContent: 'center',
     flexDirection: 'row',
     alignItems: 'center',
+    overflow: 'hidden',
   },
   image: {
     width: scaleWidth(116),

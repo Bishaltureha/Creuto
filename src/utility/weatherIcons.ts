@@ -4,4 +4,5 @@ export const weatherIcons = {
   Rain: require('../assets/image/Raining.png'),
   Lightning: require('../assets/image/Lighting.png'),
   Sun: require('../assets/image/Sun.png'),
+  Clear: require('../assets/image/Sun.png'),
 };
