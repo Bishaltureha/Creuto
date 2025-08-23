@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="readIMG/logo.png" alt="Creuto Logo" width="120"/>
+  <img src="readMeIMG/logo.png" alt="Creuto Logo" width="120"/>
 </p>
 
 <h1 align="center">🌱 Creuto App</h1>
@@ -48,14 +48,14 @@ It provides **real-time weather forecasts**, **aquaculture disease management ma
 > Add your app screenshots here
 
 <p align="center">
-  <img src="readIMG/1.png" width="200"/> 
-  <img src="readIMG/2.png" width="200"/> 
-  <img src="readIMG/3.png" width="200"/>
-  <img src="readIMG/4.png" width="200"/>
-  <img src="readIMG/5.png" width="200"/>
-  <img src="readIMG/6.png" width="200"/>
-  <img src="readIMG/7.png" width="200"/>  
-  <img src="readIMG/8.png" width="200"/>
+  <img src="readMeIMG/1.png" width="200"/> 
+  <img src="readMeIMG/2.png" width="200"/> 
+  <img src="readMeIMG/3.png" width="200"/>
+  <img src="readMeIMG/4.png" width="200"/>
+  <img src="readMeIMG/5.png" width="200"/>
+  <img src="readMeIMG/6.png" width="200"/>
+  <img src="readMeIMG/7.png" width="200"/>  
+  <img src="readMeIMG/8.png" width="200"/>
 </p>
 
 ---
