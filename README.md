@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" alt="Creuto Logo" width="120"/>
+  <img src="readIMG/logo.png" alt="Creuto Logo" width="120"/>
 </p>
 
 <h1 align="center">🌱 Creuto App</h1>
