@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  Dimensions,
-  Text,
-  Image,
-  TouchableOpacity,
-} from 'react-native';
+import {View, StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
 import {scaleHeight, scaleWidth} from '../utility/dimen';
 
 const RateUS = () => {

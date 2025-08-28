@@ -2,14 +2,27 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {AppProvider} from '../context/AppContext';
-
-// Screens
 import SplashScreen from '../screen/SplashScreen';
 import WelcomeScreen from '../screen/WelcomeScreen';
 import BottomNavigation from './BottomNavigation';
 import WeatherReport from '../screen/WeatherReport';
+import {WeatherList} from '../types';
 
-const Stack = createStackNavigator();
+export type RootStackParamList = {
+  SplashScreen: undefined;
+  WelcomeScreen: undefined;
+  BottomNavigation: undefined;
+  WeatherReport: {
+    weatherData: {
+      length: number;
+      list: WeatherList[];
+      cnt: number;
+      city: {name: string};
+    };
+  };
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 const Navigation = () => {
   return (

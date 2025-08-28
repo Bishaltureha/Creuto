@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: scaleHeight(8),
+    fontFamily: 'Public Sans',
     fontWeight: '600',
     fontSize: scaleWidth(14),
     lineHeight: scaleHeight(22),

@@ -3,7 +3,7 @@ import {StyleSheet, View, Text, Image, ImageSourcePropType} from 'react-native';
 import {scaleHeight, scaleWidth} from '../utility/dimen';
 
 type TemperatureCardProps = {
-  icon: ImageSourcePropType; // for local or remote images
+  icon: ImageSourcePropType;
   title: string;
   min: number;
   max: number;

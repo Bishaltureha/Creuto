@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Dimensions, Image} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import WaterSplash from '../assets/svg/WaterSplash';
 import {scaleHeight, scaleWidth, screenWidth} from '../utility/dimen';

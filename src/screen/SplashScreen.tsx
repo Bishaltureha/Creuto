@@ -4,10 +4,8 @@ import {useNavigation} from '@react-navigation/native';
 import Logo from '../assets/svg/Logo';
 import {Helpers} from '../utility/helper';
 import {StackNavigationProp} from '@react-navigation/stack';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const SplashScreen = () => {
-  // AsyncStorage.clear();
   const navigation = useNavigation<StackNavigationProp<any>>();
   const timer = useRef<NodeJS.Timeout>();
 

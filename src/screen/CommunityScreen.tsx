@@ -1,5 +1,4 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
 import {scaleWidth} from '../utility/dimen';
 
 const CommunityScreen = () => {
